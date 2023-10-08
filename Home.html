@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>icoder-heaven of developers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    .carousel-inner img {
+      height: 300px;
+      width: 1400px;
+    }
+
+    h4 {
+      color: black;
+    }
+
+    /* p{
+    color:white;
+   } */
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark"> -->
+
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">icoder</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/About.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              topics
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">technology</a></li>
+              <li><a class="dropdown-item" href="#">web developer</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">support</a></li>
+              <li><a class="dropdown-item" href="#">write for us</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/contact.html">contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+<!-- search in light,login,sign up all aree in danger color -->
+        <div class="mx-2">
+          <button class="btn btn-danger"data-bs-toggle="modal" data-bs-target="#loginModal">login</button>
+          <button class="btn btn-danger"data-bs-toggle="modal" data-bs-target="#signupModal">signup</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Button trigger modal 
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+  Launch demo modal
+</button>-->
+
+<!-- Modal (live demo)(for login page create) -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="loginModalLabel">Login to icoder</h1>
+        <!-- example ke jaga login,signup modal for all -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <!-- create a form gmail,password -->
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> (no need)-->
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Button trigger modal se data-bs-toggle="modal" data-bs-target="#signupModal"copy and past at first we create login and signup page me then delete button triger model and change the name also-->
+  
+<!-- Modal (live demo)(for signup page create) -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="signupModalLabel">Get an icoder account</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="cexampleInputPassword1" class="form-label"> confirm Password</label>
+            <input type="password" class="form-control" id="cexampleInputPassword1">
+          </div> 
+          <button type="submit" class="btn btn-primary">Create account</button>
+        </form>
+  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="pic1.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h4>welcome to icoder</h4>
+          <p style="color:black;">all tech related ideas</p>
+          <button class="btn btn-primary">technology</button>
+          <button class="btn btn-danger">web-developer</button>
+          <button class="btn btn-success">tech event</button>
+          <!-- button.btn.btn-primary*3 -->
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="pic2.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5> technical carrier</h5>
+          <p style="color:white;">tech related ideas </p>
+          <button class="btn btn-primary">web-developer</button>
+          <button class="btn btn-danger">machine learning</button>
+          <button class="btn btn-success">android developer</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="pic3.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>tech events</h5>
+          <p style="color:white;">technical life celebration</p>
+          <button class="btn btn-primary">fest</button>
+          <button class="btn btn-danger">decoration</button>
+          <button class="btn btn-success">event manage</button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container my-4">
+    <!-- my4 means margin 4,upar se space matlab y axis pe space rahega.u can use mx-4,ml-4,mr-4(left,right,x axis) -->
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">World</strong>
+            <h3 class="mb-0">Global conferences</h3>
+            <div class="mb-1 text-body-secondary">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
+              additional content.</p>
+            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+              Continue reading
+              <svg class="bi">
+                <use xlink:href="#chevron-right"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <!-- svg delete karke img rakhenge with an image search in google source unplash se coding save image as karke .but size niche wala svg print karenge copy karke -->
+            <img class="bd-placeholder-img" width="200" height="250" src="pic4.avif" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Design</strong>
+            <h3 class="mb-0">learn designing</h3>
+            <div class="mb-1 text-body-secondary">Nov 11</div>
+            <p class="mb-auto">This is a wider with supporting text below as a natural lead-in to additional content.
+            </p>
+            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+              Continue reading
+              <svg class="bi">
+                <use xlink:href="#chevron-right"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img class="bd-placeholder-img" width="200" height="250" src="pic5.avif" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-4">
+    <!-- my4 means margin 4,upar se space matlab y axis pe space rahega.u can use mx-4,ml-4,mr-4(left,right,x axis) -->
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-danger">FrontEnd</strong>
+            <h3 class="mb-0">bootstrap templates</h3>
+            <div class="mb-1 text-body-secondary">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
+              additional content.</p>
+            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+              Continue reading
+              <svg class="bi">
+                <use xlink:href="#chevron-right"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <!-- svg delete karke img rakhenge with an image search in google source unplash se coding save image as karke .but size niche wala svg print karenge copy karke -->
+            <img class="bd-placeholder-img" width="200" height="250" src="pic5.jpg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-warning">Python</strong>
+            <h3 class="mb-0">python learning</h3>
+            <div class="mb-1 text-body-secondary">Nov 11</div>
+            <p class="mb-auto">This is a wider with supporting text below as a natural lead-in to additional content.
+            </p>
+            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+              Continue reading
+              <svg class="bi">
+                <use xlink:href="#chevron-right"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img class="bd-placeholder-img" width="200" height="250" src="pic6.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>© 2004–2023 Company icoder, Inc.. <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+  </footer>
+  <!-- example (choose one then those u want to print inspect that)(then element se choose kar kitne se kitne tak flex)(then usme 1st row ko right click karke edit as html then us bich me jake ctrl a c mar )(then code pe jake container karke paste it)-->
+  <!-- <img src="https://instanthub.s3.amazonaws.com/wp-content/uploads/2017/12/o-CODING-facebook.jpg" alt="Description" width="1400" height="300">
+
+       <img src="https://instanthub.s3.amazonaws.com/wp-content/uploads/2017/12/o-CODING-facebook.jpg" alt="Description" class="my-image"> -->
+  <!-- About.html (bootstrap se carousel layout copy karke paste  kiya but container me sab delete karke nav ke bad rakha) -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
